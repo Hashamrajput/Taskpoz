@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TASK poz</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<!-- VanillaTilt for 3D tilt -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+<script>
+  VanillaTilt.init(document.querySelectorAll(".tilt-3d"), {
+    max: 8,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.2
+  });
+</script>
+
+
+
+  <style>
+    @keyframes fade-in-up {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in-up {
+      animation: fade-in-up 1s ease-out forwards;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+<!-- Navbar -->
+<!-- Navbar (Fixed Glass with Icons + Responsive) -->
+<header class="glass fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl rounded-xl px-6 py-4 flex justify-between items-center shadow-xl z-50 bg-white/5 backdrop-blur-md">
+  <!-- Logo -->
+  <h1 class="text-2xl font-bold text-purple-400 flex items-center gap-1">
+    <span class="drop-shadow-[0_0_10px_#a855f7]">Task<span class="text-white">Poz</span></span>
+  </h1>
+
+  <!-- Desktop Menu -->
+  <nav class="hidden md:flex space-x-6 text-sm md:text-base items-center text-white">
+    <a href="index.html" class="flex items-center gap-1 hover:text-purple-400"><i data-lucide="home" class="w-4 h-4"></i>Home</a>
+    <a href="serviec.html" class="flex items-center gap-1 hover:text-purple-400"><i data-lucide="layers" class="w-4 h-4"></i>Services</a>
+    <a href="About.html" class="flex items-center gap-1 hover:text-purple-400"><i data-lucide="user" class="w-4 h-4"></i>About</a>
+    <a href="contact.html" class="flex items-center gap-1 hover:text-purple-400"><i data-lucide="mail" class="w-4 h-4"></i>Contact</a>
+  </nav>
+
+  <!-- Mobile Toggle -->
+  <button id="menuToggle" class="md:hidden text-purple-400">
+    <i data-lucide="menu" class="w-6 h-6"></i>
+  </button>
+</header>
+
+<!-- Mobile Dropdown Menu -->
+<div id="mobileMenu" class="hidden fixed top-24 left-1/2 -translate-x-1/2 w-[85%] bg-[#1e1b2e] rounded-xl p-6 shadow-lg text-white z-40 space-y-4 text-center md:hidden">
+  <a href="index.html" class="block hover:text-purple-400 flex items-center justify-center gap-2"><i data-lucide="home" class="w-4 h-4"></i>Home</a>
+  <a href="serviec.html" class="block hover:text-purple-400 flex items-center justify-center gap-2"><i data-lucide="layers" class="w-4 h-4"></i>Services</a>
+  <a href="About.html" class="block hover:text-purple-400 flex items-center justify-center gap-2"><i data-lucide="user" class="w-4 h-4"></i>About</a>
+  <a href="contact.html" class="block hover:text-purple-400 flex items-center justify-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i>Contact</a>
+</div>
+
+<!-- Load Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+
+  // Toggle mobile menu
+  document.getElementById("menuToggle").addEventListener("click", () => {
+    document.getElementById("mobileMenu").classList.toggle("hidden");
+  });
+</script>
+
+<!-- Hero Section -->
+<section class="relative h-screen bg-cover bg-center flex items-center justify-center text-white" style="background-image: url('img/lee-campbell-DtDlVpy-vvQ-unsplash.jpg');">
+  <div class="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
+
+  <div class="relative z-10 text-center max-w-4xl px-4 animate-fade-in-up">
+    <!-- Logo/Icon -->
+    <div class="flex justify-center mb-4">
+      <img src="img/developer-logo-512.jpg" alt="Developer Logo" class="w-24 h-24 rounded-full border-4 border-purple-400 shadow-2xl object-cover" />
+    </div>
+
+    <!-- I'm a Developer -->
+    <p class="text-lg md:text-xl text-purple-400 font-semibold mb-2 tracking-wide">
+      I'm a Developer
+    </p>
+
+    <!-- Heading -->
+    <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+      Welcome to Task Poz Team
+    </h1>
+
+    <!-- Subheading -->
+    <p class="text-xl md:text-2xl text-gray-300 mb-8">
+     Hi Im a developer
+    </p>
+
+    <!-- Icon Features -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 justify-items-center">
+      <div class="flex flex-col items-center hover:scale-110 transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" class="w-12 h-12 mb-2" />
+        <span class="text-sm text-gray-200">Web Design</span>
+      </div>
+      <div class="flex flex-col items-center hover:scale-110 transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" class="w-12 h-12 mb-2" />
+        <span class="text-sm text-gray-200">UI/UX</span>
+      </div>
+      <div class="flex flex-col items-center hover:scale-110 transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/906/906343.png" class="w-12 h-12 mb-2" />
+        <span class="text-sm text-gray-200">Frontend Dev</span>
+      </div>
+      <div class="flex flex-col items-center hover:scale-110 transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/270/270798.png" class="w-12 h-12 mb-2" />
+        <span class="text-sm text-gray-200">SEO & Speed</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<!-- Services Section - 3D Style Developer -->
+<section class="py-20 px-6 bg-[#0e0c1b] text-white">
+  <div class="text-center mb-14">
+    <h2 class="text-4xl font-bold mb-3 text-purple-400 drop-shadow-[0_0_10px_#a855f7]">Our Services</h2>
+    <p class="text-gray-400">Our services</p>
+  </div>
+
+  <!-- First Row -->
+  <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
+    <!-- Card 1 -->
+    <div class="bg-gradient-to-br from-[#1f1b2e] to-[#292040] p-6 rounded-3xl shadow-[0_0_30px_rgba(168,85,247,0.25)] border border-purple-500/10 transform transition duration-500 hover:rotate-[1deg] hover:scale-105 hover:shadow-[0_0_50px_rgba(168,85,247,0.5)] animate-fade-in-up">
+      <img src="https://cdn-icons-png.flaticon.com/512/2721/2721291.png" class="w-16 h-16 mb-4 mx-auto" />
+      <h3 class="text-xl font-semibold mb-2 text-purple-300">Web Development</h3>
+      <p class="text-gray-300 text-sm">Custom websites with modern frameworks like React, Next.js & Tailwind CSS.</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-gradient-to-br from-[#1f1b2e] to-[#292040] p-6 rounded-3xl shadow-[0_0_30px_rgba(168,85,247,0.25)] border border-purple-500/10 transform transition duration-500 hover:rotate-[1deg] hover:scale-105 hover:shadow-[0_0_50px_rgba(168,85,247,0.5)] animate-fade-in-up delay-100">
+      <img src="https://cdn-icons-png.flaticon.com/512/3132/3132693.png" class="w-16 h-16 mb-4 mx-auto" />
+      <h3 class="text-xl font-semibold mb-2 text-purple-300">UI/UX Design</h3>
+      <p class="text-gray-300 text-sm">Sleek interfaces with smooth interactions and a user-first approach.</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-gradient-to-br from-[#1f1b2e] to-[#292040] p-6 rounded-3xl shadow-[0_0_30px_rgba(168,85,247,0.25)] border border-purple-500/10 transform transition duration-500 hover:rotate-[1deg] hover:scale-105 hover:shadow-[0_0_50px_rgba(168,85,247,0.5)] animate-fade-in-up delay-200">
+      <img src="https://cdn-icons-png.flaticon.com/512/4181/4181363.png" class="w-16 h-16 mb-4 mx-auto" />
+      <h3 class="text-xl font-semibold mb-2 text-purple-300">Performance & SEO</h3>
+      <p class="text-gray-300 text-sm">Speed-optimized, mobile-first websites with strong technical SEO foundations.</p>
+    </div>
+  </div>
+
+  <!-- Second Row -->
+  <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    <!-- Card 4 -->
+    <div class="bg-gradient-to-br from-[#1f1b2e] to-[#292040] p-6 rounded-3xl shadow-[0_0_30px_rgba(168,85,247,0.25)] border border-purple-500/10 transform transition duration-500 hover:rotate-[1deg] hover:scale-105 hover:shadow-[0_0_50px_rgba(168,85,247,0.5)] animate-fade-in-up">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" class="w-16 h-16 mb-4 mx-auto" />
+      <h3 class="text-xl font-semibold mb-2 text-purple-300">Custom Portfolio Websites</h3>
+      <p class="text-gray-300 text-sm">Unique 3D portfolio sites for developers, freelancers & creatives to stand out.</p>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="bg-gradient-to-br from-[#1f1b2e] to-[#292040] p-6 rounded-3xl shadow-[0_0_30px_rgba(168,85,247,0.25)] border border-purple-500/10 transform transition duration-500 hover:rotate-[1deg] hover:scale-105 hover:shadow-[0_0_50px_rgba(168,85,247,0.5)] animate-fade-in-up delay-100">
+      <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" class="w-16 h-16 mb-4 mx-auto" />
+      <h3 class="text-xl font-semibold mb-2 text-purple-300">Interactive UI/UX</h3>
+      <p class="text-gray-300 text-sm">Smooth interfaces with 3D effects, animations, and intuitive design patterns.</p>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="bg-gradient-to-br from-[#1f1b2e] to-[#292040] p-6 rounded-3xl shadow-[0_0_30px_rgba(168,85,247,0.25)] border border-purple-500/10 transform transition duration-500 hover:rotate-[1deg] hover:scale-105 hover:shadow-[0_0_50px_rgba(168,85,247,0.5)] animate-fade-in-up delay-200">
+      <img src="https://cdn-icons-png.flaticon.com/512/906/906343.png" class="w-16 h-16 mb-4 mx-auto" />
+      <h3 class="text-xl font-semibold mb-2 text-purple-300">Frontend Development</h3>
+      <p class="text-gray-300 text-sm">Build fast, responsive apps using React, Tailwind, and the latest web tools.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- About Section -->
+<section class="relative py-20 px-6 bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e] text-white overflow-hidden">
+  <div class="absolute inset-0 bg-white/5 backdrop-blur-sm rounded-3xl pointer-events-none"></div>
+
+  <div class="max-w-6xl mx-auto glass p-10 rounded-3xl border border-purple-400/20 shadow-[0_0_40px_rgba(168,85,247,0.2)] animate-fade-in-up">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 text-purple-400 drop-shadow-md">About Me</h2>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto">Passionate about creating immersive digital experiences with cutting-edge code & creative UI.</p>
+    </div>
+
+    <div class="md:flex md:items-center md:gap-10 mt-10">
+      <div class="flex-shrink-0 mb-8 md:mb-0 mx-auto md:mx-0">
+        <img src="img/developer-logo-512.jpg" alt="Developer" class="w-48 h-48 rounded-full object-cover border-4 border-purple-400 shadow-lg" />
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-semibold mb-3 text-white">I'm a Full-Stack Developer</h3>
+        <p class="text-gray-400 mb-4">I build responsive, fast-loading web apps using <span class="text-purple-400 font-semibold">React</span>, <span class="text-purple-400 font-semibold">Next.js</span>, and scalable backend APIs.</p>
+        <a href="#" class="inline-block mt-4 px-6 py-2 bg-purple-400 text-black font-semibold rounded-full shadow-md hover:bg-purple-300 transition">
+          📄 Download Resume
+        </a>
+      </div>
+    </div>
+
+    <!-- Skills Progress -->
+    <div class="mt-12">
+      <h3 class="text-2xl font-bold mb-6 text-purple-400">Core Skills</h3>
+      <div class="space-y-5">
+        <div>
+          <p class="text-sm mb-1">HTML / CSS / Tailwind</p>
+          <div class="w-full h-3 bg-gray-800 rounded-full overflow-hidden">
+            <div class="bg-purple-400 h-full w-[95%] rounded-full animate-[grow_2s_ease-out]"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-sm mb-1">JavaScript / React.js</p>
+          <div class="w-full h-3 bg-gray-800 rounded-full overflow-hidden">
+            <div class="bg-purple-400 h-full w-[90%] rounded-full animate-[grow_2s_ease-out]"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-sm mb-1">Node.js / Express</p>
+          <div class="w-full h-3 bg-gray-800 rounded-full overflow-hidden">
+            <div class="bg-purple-400 h-full w-[80%] rounded-full animate-[grow_2s_ease-out]"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-sm mb-1">MongoDB / MySQL</p>
+          <div class="w-full h-3 bg-gray-800 rounded-full overflow-hidden">
+            <div class="bg-purple-400 h-full w-[75%] rounded-full animate-[grow_2s_ease-out]"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Contact Section -->
+<section class="relative py-24 px-6 bg-gradient-to-br from-[#0b0916] to-[#0e0c1b] text-white scroll-mt-20">
+  <!-- Trigger Button -->
+<!-- Trigger Button -->
+<div class="text-center py-10">
+  <button onclick="document.getElementById('contactModal').classList.remove('hidden')" 
+    class="bg-purple-500 px-8 py-3 rounded-full shadow-lg text-white text-lg hover:bg-purple-400 transition duration-300">
+    💬 Contact Me
+  </button>
+</div>
+
+<!-- Modal Contact Form -->
+<div id="contactModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center">
+  <div class="relative bg-[#1f1b2e] rounded-3xl p-10 max-w-xl w-full shadow-[0_0_60px_rgba(168,85,247,0.3)] tilt-3d animate-fade-in-up" data-aos="zoom-in">
+    
+    <!-- Close Button -->
+    <button onclick="document.getElementById('contactModal').classList.add('hidden')" 
+      class="absolute top-3 right-4 text-purple-300 text-2xl hover:text-purple-500">×</button>
+    
+    <!-- Heading -->
+    <div class="text-center mb-8">
+      <h2 class="text-4xl font-bold text-purple-400 drop-shadow-[0_0_10px_#a855f7]">Contact Me</h2>
+      <p class="text-gray-400 mt-2">Let’s build something great together 🚀</p>
+    </div>
+
+    <!-- Contact Form -->
+    <form class="space-y-6">
+      <div class="grid md:grid-cols-2 gap-6">
+        <input type="text" placeholder="Your Name" 
+          class="bg-black/40 border border-purple-500/20 rounded-xl p-3 w-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" />
+        <input type="email" placeholder="Your Email" 
+          class="bg-black/40 border border-purple-500/20 rounded-xl p-3 w-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" />
+      </div>
+
+      <!-- New Inputs -->
+      <input type="tel" placeholder="Phone Number" 
+        class="bg-black/40 border border-purple-500/20 rounded-xl p-3 w-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" />
+      
+      <input type="text" placeholder="Subject" 
+        class="bg-black/40 border border-purple-500/20 rounded-xl p-3 w-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" />
+
+      <textarea rows="4" placeholder="Your Message" 
+        class="bg-black/40 border border-purple-500/20 rounded-xl p-3 w-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+      
+      <button type="submit" 
+        class="w-full bg-purple-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-purple-300 transition shadow-md">
+        ✉️ Send Message
+      </button>
+    </form>
+  </div>
+</div>
+
+
+</section>
+
+
+<!-- Footer Section -->
+<footer class="bg-[#0e0c1b] text-gray-400 pt-20 pb-10 px-6 border-t border-purple-500/10">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-4 sm:grid-cols-2 gap-10 animate-fade-in-up">
+
+    <!-- Logo & Intro -->
+    <div>
+      <h3 class="text-2xl font-bold text-purple-400 mb-4">TASK POZ</h3>
+      <p class="text-sm">thanks for watch Task poz website</p>
+    </div>
+
+    <!-- Navigation -->
+    <div>
+      <h4 class="text-lg font-semibold text-white mb-3">Quick Links</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#home" class="hover:text-purple-400 transition">Home</a></li>
+        <li><a href="#services" class="hover:text-purple-400 transition">Services</a></li>
+        <li><a href="#about" class="hover:text-purple-400 transition">About</a></li>
+        <li><a href="#contact" class="hover:text-purple-400 transition">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Services List -->
+    <div>
+      <h4 class="text-lg font-semibold text-white mb-3">Services</h4>
+      <ul class="space-y-2 text-sm">
+        <li>3D Portfolio Websites</li>
+        <li>UI/UX Design</li>
+        <li>Frontend Development</li>
+        <li>SEO & Performance</li>
+      </ul>
+    </div>
+
+    <!-- Social & Contact -->
+    <div>
+      <h4 class="text-lg font-semibold text-white mb-3">Connect</h4>
+      <ul class="space-y-3 text-sm">
+        <li><a href="#" class="flex items-center gap-2 hover:text-purple-400 transition"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" class="w-4 h-4"> facbook</a></li>
+        <li><a href="#" class="flex items-center gap-2 hover:text-purple-400 transition"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" class="w-4 h-4">Twitter </a></li>
+        <li><a href="#" class="flex items-center gap-2 hover:text-purple-400 transition"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" class="w-4 h-4"> Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="text-center mt-16 text-sm text-gray-500">
+    © 2025 TASK POZ. All rights reserved.
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>

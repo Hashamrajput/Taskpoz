@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services – TaskPoz</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Scroll Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- VanillaTilt -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+  <style>
+    body {
+      background-color: #0e0c1b;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+  
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+  }
+
+ .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  .animate-float-slow {
+    animation: float 8s ease-in-out infinite;
+  }
+  .animate-float-mid {
+    animation: float 7s ease-in-out infinite;
+  }
+  .animate-float-fast {
+    animation: float 5s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+  </style>
+</head>
+<body>
+
+<section class="min-h-screen flex items-center justify-center px-6 bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white relative overflow-hidden">
+  <!-- Optional Background Blur -->
+  <div class="absolute inset-0 bg-white/5 backdrop-blur-sm pointer-events-none z-0"></div>
+
+  <!-- Main Content -->
+  <div class="relative z-10 max-w-6xl w-full text-center space-y-8" data-aos="fade-up">
+    <h1 class="text-5xl md:text-6xl font-bold text-purple-400 drop-shadow-lg">
+      Hi, I'm Hasham 👋
+    </h1>
+    <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+      A creative full-stack developer building immersive and high-performance web applications with modern technologies.
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="flex justify-center gap-6 mt-6 flex-wrap">
+      <a href="contact.html" class="px-6 py-3 bg-purple-500 text-black font-semibold rounded-full shadow-md hover:bg-purple-400 transition">
+        📬 Contact Me
+      </a>
+      <a href="#projects" class="px-6 py-3 border border-purple-400 text-white font-semibold rounded-full hover:bg-purple-400 hover:text-black transition">
+        💼 View Projects
+      </a>
+    </div>
+
+    <!-- 3D Tilt Image -->
+    <div class="mt-10 tilt-3d inline-block" data-aos="zoom-in">
+      <img src="img/developer-logo-512.jpg" alt="Developer" class="w-44 h-44 md:w-56 md:h-56 rounded-full border-4 border-purple-400 shadow-xl" />
+    </div>
+  </div>
+</section>
+
+
+<section id="home" class="relative bg-[#0e0c1b] text-white overflow-hidden min-h-screen flex items-center justify-center px-6 py-20">
+  <!-- Text Content -->
+  <div class="text-center z-10 max-w-3xl" data-aos="fade-up">
+    <h1 class="text-4xl md:text-6xl font-bold text-purple-400 drop-shadow-[0_0_10px_#a855f7] mb-4">
+      IM A FULL-STACK DEVELOPER
+    </h1>
+    <p class="text-gray-300 text-lg max-w-xl mx-auto">
+      From pixel-perfect designs to blazing-fast code — we bring your digital dreams to life.
+    </p>
+  </div>
+
+  <!-- Floating Images -->
+  <div class="absolute top-10 left-10 w-20 sm:w-28 animate-float-slow" data-aos="zoom-in">
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML" class="w-full tilt-3d" />
+  </div>
+  <div class="absolute top-20 right-16 w-20 sm:w-28 animate-float-fast" data-aos="zoom-in">
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS" class="w-full tilt-3d" />
+  </div>
+  <div class="absolute bottom-10 left-16 w-20 sm:w-28 animate-float-mid" data-aos="zoom-in">
+    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="React" class="w-full tilt-3d" />
+  </div>
+  <div class="absolute bottom-12 right-20 w-20 sm:w-28 animate-float" data-aos="zoom-in">
+    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" alt="Tailwind" class="w-full tilt-3d" />
+  </div>
+</section>
+
+
+
+
+
+<!-- Header -->
+<!-- Navbar (Fixed Glass with Icons + Responsive) -->
+<header class="glass fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl rounded-xl px-6 py-4 flex justify-between items-center shadow-xl z-50 bg-white/5 backdrop-blur-md">
+  <!-- Logo -->
+  <h1 class="text-2xl font-bold text-purple-400 flex items-center gap-1">
+    <span class="drop-shadow-[0_0_10px_#a855f7]">Task<span class="text-white">Poz</span></span>
+  </h1>
+
+  <!-- Desktop Menu -->
+  <nav class="hidden md:flex space-x-6 text-sm md:text-base items-center text-white">
+    <a href="index.html" class="flex items-center gap-1 hover:text-purple-400"><i data-lucide="home" class="w-4 h-4"></i>Home</a>
+    <a href="serviec.html" class="flex items-center gap-1 hover:text-purple-400"><i data-lucide="layers" class="w-4 h-4"></i>Services</a>
+    <a href="about.html" class="flex items-center gap-1 hover:text-purple-400"><i data-lucide="user" class="w-4 h-4"></i>About</a>
+    <a href="contact.html" class="flex items-center gap-1 hover:text-purple-400"><i data-lucide="mail" class="w-4 h-4"></i>Contact</a>
+  </nav>
+
+  <!-- Mobile Toggle -->
+  <button id="menuToggle" class="md:hidden text-purple-400">
+    <i data-lucide="menu" class="w-6 h-6"></i>
+  </button>
+</header>
+
+<!-- Mobile Dropdown Menu -->
+<div id="mobileMenu" class="hidden fixed top-24 left-1/2 -translate-x-1/2 w-[85%] bg-[#1e1b2e] rounded-xl p-6 shadow-lg text-white z-40 space-y-4 text-center md:hidden">
+  <a href="index.html" class="block hover:text-purple-400 flex items-center justify-center gap-2"><i data-lucide="home" class="w-4 h-4"></i>Home</a>
+  <a href="services.html" class="block hover:text-purple-400 flex items-center justify-center gap-2"><i data-lucide="layers" class="w-4 h-4"></i>Services</a>
+  <a href="about.html" class="block hover:text-purple-400 flex items-center justify-center gap-2"><i data-lucide="user" class="w-4 h-4"></i>About</a>
+  <a href="contact.html" class="block hover:text-purple-400 flex items-center justify-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i>Contact</a>
+</div>
+
+<!-- Load Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+
+  // Toggle mobile menu
+  document.getElementById("menuToggle").addEventListener("click", () => {
+    document.getElementById("mobileMenu").classList.toggle("hidden");
+  });
+</script>
+
+
+<!-- Spacer for fixed header -->
+<div class="h-28"></div>
+
+<!-- Services Section -->
+<section class="py-20 px-6">
+  <div class="text-center mb-14">
+    <h2 class="text-4xl font-bold text-purple-400 drop-shadow-[0_0_10px_#a855f7]">Our Services</h2>
+    <p class="text-gray-400 mt-2">High-end web solutions that combine design, performance, and motion.</p>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+    <!-- Card 1 -->
+    <div class="tilt-3d bg-white/5 glass p-8 rounded-2xl shadow-2xl hover:shadow-[0_0_50px_rgba(168,85,247,0.5)] transition" data-aos="fade-up">
+      <img src="https://cdn-icons-png.flaticon.com/512/2721/2721291.png" alt="" class="w-14 h-14 mx-auto mb-4">
+      <h3 class="text-xl font-semibold text-purple-300 mb-2">Web Development</h3>
+      <p class="text-gray-300 text-sm">Responsive sites built with Tailwind, React, and performance-first code.</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="tilt-3d bg-white/5 glass p-8 rounded-2xl shadow-2xl hover:shadow-[0_0_50px_rgba(168,85,247,0.5)] transition" data-aos="fade-up" data-aos-delay="100">
+      <img src="https://cdn-icons-png.flaticon.com/512/3132/3132693.png" alt="" class="w-14 h-14 mx-auto mb-4">
+      <h3 class="text-xl font-semibold text-purple-300 mb-2">UI/UX Design</h3>
+      <p class="text-gray-300 text-sm">Clean, modern designs that are intuitive, interactive, and conversion-focused.</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="tilt-3d bg-white/5 glass p-8 rounded-2xl shadow-2xl hover:shadow-[0_0_50px_rgba(168,85,247,0.5)] transition" data-aos="fade-up" data-aos-delay="200">
+      <img src="https://cdn-icons-png.flaticon.com/512/4181/4181363.png" alt="" class="w-14 h-14 mx-auto mb-4">
+      <h3 class="text-xl font-semibold text-purple-300 mb-2">SEO & Speed</h3>
+      <p class="text-gray-300 text-sm">Optimized sites that load fast and rank well using best SEO practices.</p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="tilt-3d bg-white/5 glass p-8 rounded-2xl shadow-2xl hover:shadow-[0_0_50px_rgba(168,85,247,0.5)] transition" data-aos="fade-up">
+      <img src="https://cdn-icons-png.flaticon.com/512/906/906343.png" alt="" class="w-14 h-14 mx-auto mb-4">
+      <h3 class="text-xl font-semibold text-purple-300 mb-2">Frontend Engineering</h3>
+      <p class="text-gray-300 text-sm">Component-driven scalable architecture for maintainable frontend apps.</p>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="tilt-3d bg-white/5 glass p-8 rounded-2xl shadow-2xl hover:shadow-[0_0_50px_rgba(168,85,247,0.5)] transition" data-aos="fade-up" data-aos-delay="100">
+      <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="" class="w-14 h-14 mx-auto mb-4">
+      <h3 class="text-xl font-semibold text-purple-300 mb-2">3D Motion & Interactivity</h3>
+      <p class="text-gray-300 text-sm">VanillaTilt, AOS, Framer Motion to bring pages to life with smooth motion.</p>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="tilt-3d bg-white/5 glass p-8 rounded-2xl shadow-2xl hover:shadow-[0_0_50px_rgba(168,85,247,0.5)] transition" data-aos="fade-up" data-aos-delay="200">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="" class="w-14 h-14 mx-auto mb-4">
+      <h3 class="text-xl font-semibold text-purple-300 mb-2">Deployment</h3>
+      <p class="text-gray-300 text-sm">Netlify, Vercel, GitHub Pages deployment with CI/CD and git integration.</p>
+    </div>
+  </div>
+
+<!-- Services Section (3 Cards Only) -->
+<section class="py-20 px-6 bg-[#0e0c1b] text-white">
+  <div class="text-center mb-14">
+    <h2 class="text-4xl font-bold text-purple-400 drop-shadow-[0_0_10px_#a855f7]">Our Core Services</h2>
+    <p class="text-gray-400 mt-2">What we specialize in — fast, beautiful, performant development.</p>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+    <!-- Card 1 - Web Development -->
+    <div class="tilt-3d glass p-8 rounded-2xl shadow-2xl hover:shadow-[0_0_40px_rgba(168,85,247,0.5)] transition" data-aos="fade-up">
+      <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Web Development" class="w-14 h-14 mx-auto mb-4">
+      <h3 class="text-xl font-semibold text-purple-300 mb-2 text-center">Web Development</h3>
+      <p class="text-gray-300 text-sm text-center">Modern, scalable web apps using React, Tailwind, Node.js and more.</p>
+    </div>
+
+    <!-- Card 2 - Frontend Architecture -->
+    <div class="tilt-3d glass p-8 rounded-2xl shadow-2xl hover:shadow-[0_0_40px_rgba(168,85,247,0.5)] transition" data-aos="fade-up" data-aos-delay="100">
+      <img src="https://cdn-icons-png.flaticon.com/512/953/953810.png" alt="Frontend Architecture" class="w-14 h-14 mx-auto mb-4">
+      <h3 class="text-xl font-semibold text-purple-300 mb-2 text-center">Frontend Architecture</h3>
+      <p class="text-gray-300 text-sm text-center">Robust component-based frontends with maintainable code.</p>
+    </div>
+
+    <!-- Card 3 - UI/UX Design -->
+    <div class="tilt-3d glass p-8 rounded-2xl shadow-2xl hover:shadow-[0_0_40px_rgba(168,85,247,0.5)] transition" data-aos="fade-up" data-aos-delay="200">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="UI/UX Design" class="w-14 h-14 mx-auto mb-4">
+      <h3 class="text-xl font-semibold text-purple-300 mb-2 text-center">UI/UX Design</h3>
+      <p class="text-gray-300 text-sm text-center">Elegant, user-friendly interfaces with modern aesthetics.</p>
+    </div>
+
+    <!-- Card 4 - Wireframing -->
+    <div class="tilt-3d glass p-8 rounded-2xl shadow-2xl hover:shadow-[0_0_40px_rgba(168,85,247,0.5)] transition" data-aos="fade-up" data-aos-delay="300">
+      <img src="https://cdn-icons-png.flaticon.com/512/3132/3132679.png" alt="Wireframing" class="w-14 h-14 mx-auto mb-4">
+      <h3 class="text-xl font-semibold text-purple-300 mb-2 text-center">Wireframing</h3>
+      <p class="text-gray-300 text-sm text-center">Blueprints and low-fidelity prototypes for early-stage UI planning.</p>
+    </div>
+
+    <!-- Card 5 - SEO Optimization -->
+    <div class="tilt-3d glass p-8 rounded-2xl shadow-2xl hover:shadow-[0_0_40px_rgba(168,85,247,0.5)] transition" data-aos="fade-up" data-aos-delay="400">
+      <img src="https://cdn-icons-png.flaticon.com/512/1069/1069111.png" alt="SEO" class="w-14 h-14 mx-auto mb-4">
+      <h3 class="text-xl font-semibold text-purple-300 mb-2 text-center">SEO Optimization</h3>
+      <p class="text-gray-300 text-sm text-center">Rank higher and reach your audience faster with on-page SEO.</p>
+    </div>
+
+    <!-- Card 6 - Speed & Performance -->
+    <div class="tilt-3d glass p-8 rounded-2xl shadow-2xl hover:shadow-[0_0_40px_rgba(168,85,247,0.5)] transition" data-aos="fade-up" data-aos-delay="500">
+      <img src="https://cdn-icons-png.flaticon.com/512/1230/1230827.png" alt="Performance" class="w-14 h-14 mx-auto mb-4">
+      <h3 class="text-xl font-semibold text-purple-300 mb-2 text-center">Speed & Performance</h3>
+      <p class="text-gray-300 text-sm text-center">Optimized assets, code splitting, caching and Core Web Vitals.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Services Full Grid Section -->
+<section class="py-20 px-6 bg-[#0e0c1b] text-white">
+  <div class="text-center mb-16">
+    <h2 class="text-4xl font-bold text-purple-400 drop-shadow-[0_0_10px_#a855f7]">Full Service Stack (A–Z)</h2>
+    <p class="text-gray-400 mt-2">From development to design to SEO – we cover it all.</p>
+  </div>
+
+  <!-- Row 1: Web Development -->
+  <div class="mb-14">
+    <h3 class="text-2xl font-semibold text-center text-purple-300 mb-8">Web Development</h3>
+    <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-7xl mx-auto">
+      <div class="tilt-3d glass p-4 rounded-xl shadow-xl" data-aos="fade-up">HTML</div>
+      <div class="tilt-3d glass p-4 rounded-xl shadow-xl" data-aos="fade-up" data-aos-delay="50">CSS</div>
+      <div class="tilt-3d glass p-4 rounded-xl shadow-xl" data-aos="fade-up" data-aos-delay="100">JavaScript</div>
+      <div class="tilt-3d glass p-4 rounded-xl shadow-xl" data-aos="fade-up" data-aos-delay="150">Tailwind CSS</div>
+      <div class="tilt-3d glass p-4 rounded-xl shadow-xl" data-aos="fade-up" data-aos-delay="200">React.js</div>
+      <div class="tilt-3d glass p-4 rounded-xl shadow-xl" data-aos="fade-up" data-aos-delay="250">API Integration</div>
+    </div>
+  </div>
+
+  <!-- Row 2: Web Design -->
+  <div class="mb-14">
+    <h3 class="text-2xl font-semibold text-center text-purple-300 mb-8">Web Design</h3>
+    <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-7xl mx-auto">
+      <div class="tilt-3d glass p-4 rounded-xl shadow-xl" data-aos="fade-up">Figma Design</div>
+      <div class="tilt-3d glass p-4 rounded-xl shadow-xl" data-aos="fade-up" data-aos-delay="50">Wireframing</div>
+      <div class="tilt-3d glass p-4 rounded-xl shadow-xl" data-aos="fade-up" data-aos-delay="100">UI/UX Prototypes</div>
+      <div class="tilt-3d glass p-4 rounded-xl shadow-xl" data-aos="fade-up" data-aos-delay="150">Component Libraries</div>
+      <div class="tilt-3d glass p-4 rounded-xl shadow-xl" data-aos="fade-up" data-aos-delay="200">Accessibility</div>
+      <div class="tilt-3d glass p-4 rounded-xl shadow-xl" data-aos="fade-up" data-aos-delay="250">Micro Interactions</div>
+    </div>
+  </div>
+
+  <!-- Row 3: SEO & Speed -->
+  <div>
+    <h3 class="text-2xl font-semibold text-center text-purple-300 mb-8">SEO & Speed Optimization</h3>
+    <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-7xl mx-auto">
+      <div class="tilt-3d glass p-4 rounded-xl shadow-xl" data-aos="fade-up">On-Page SEO</div>
+      <div class="tilt-3d glass p-4 rounded-xl shadow-xl" data-aos="fade-up" data-aos-delay="50">Off-Page SEO</div>
+      <div class="tilt-3d glass p-4 rounded-xl shadow-xl" data-aos="fade-up" data-aos-delay="100">Speed Optimization</div>
+      <div class="tilt-3d glass p-4 rounded-xl shadow-xl" data-aos="fade-up" data-aos-delay="150">Image Compression</div>
+      <div class="tilt-3d glass p-4 rounded-xl shadow-xl" data-aos="fade-up" data-aos-delay="200">Sitemap / Robots</div>
+      <div class="tilt-3d glass p-4 rounded-xl shadow-xl" data-aos="fade-up" data-aos-delay="250">Core Web Vitals</div>
+    </div>
+  </div>
+</section>
+
+
+</section>
+
+<!-- Footer -->
+<footer class="text-center mt-20 text-sm text-gray-500 pb-6">
+  © 2025 TaskPoz. Built with ❤️ and Tailwind CSS.
+</footer>
+
+<!-- Init AOS + Tilt -->
+<script>
+  AOS.init();
+  VanillaTilt.init(document.querySelectorAll(".tilt-3d"), {
+    max: 8,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.2
+  });
+</script>
+
+</body>
+</html>

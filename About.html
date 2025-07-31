@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - Full Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    body {
+      background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .drop-purple {
+      text-shadow: 0 0 10px #a855f7;
+    }
+  </style>
+</head>
+<body class="text-white overflow-x-hidden">
+
+<!-- Navbar -->
+<!-- Navbar (Fixed Glass with Icons + Responsive) -->
+<header class="glass fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl rounded-xl px-6 py-4 flex justify-between items-center shadow-xl z-50 bg-white/5 backdrop-blur-md">
+  <!-- Logo -->
+  <h1 class="text-2xl font-bold text-purple-400 flex items-center gap-1">
+    <span class="drop-shadow-[0_0_10px_#a855f7]">Task<span class="text-white">Poz</span></span>
+  </h1>
+
+  <!-- Desktop Menu -->
+  <nav class="hidden md:flex space-x-6 text-sm md:text-base items-center text-white">
+    <a href="index.html" class="flex items-center gap-1 hover:text-purple-400"><i data-lucide="home" class="w-4 h-4"></i>Home</a>
+    <a href="services.html" class="flex items-center gap-1 hover:text-purple-400"><i data-lucide="layers" class="w-4 h-4"></i>Services</a>
+    <a href="about.html" class="flex items-center gap-1 hover:text-purple-400"><i data-lucide="user" class="w-4 h-4"></i>About</a>
+    <a href="contact.html" class="flex items-center gap-1 hover:text-purple-400"><i data-lucide="mail" class="w-4 h-4"></i>Contact</a>
+  </nav>
+
+  <!-- Mobile Toggle -->
+  <button id="menuToggle" class="md:hidden text-purple-400">
+    <i data-lucide="menu" class="w-6 h-6"></i>
+  </button>
+</header>
+
+<!-- Mobile Dropdown Menu -->
+<div id="mobileMenu" class="hidden fixed top-24 left-1/2 -translate-x-1/2 w-[85%] bg-[#1e1b2e] rounded-xl p-6 shadow-lg text-white z-40 space-y-4 text-center md:hidden">
+  <a href="index.html" class="block hover:text-purple-400 flex items-center justify-center gap-2"><i data-lucide="home" class="w-4 h-4"></i>Home</a>
+  <a href="serviec.html" class="block hover:text-purple-400 flex items-center justify-center gap-2"><i data-lucide="layers" class="w-4 h-4"></i>Services</a>
+  <a href="about.html" class="block hover:text-purple-400 flex items-center justify-center gap-2"><i data-lucide="user" class="w-4 h-4"></i>About</a>
+  <a href="contact.html" class="block hover:text-purple-400 flex items-center justify-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i>Contact</a>
+</div>
+
+<!-- Load Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+
+  // Toggle mobile menu
+  document.getElementById("menuToggle").addEventListener("click", () => {
+    document.getElementById("mobileMenu").classList.toggle("hidden");
+  });
+</script>
+
+
+<!-- About Section -->
+<section class="min-h-screen flex items-center justify-center py-20 px-4 md:px-8">
+  <div class="relative max-w-6xl w-full glass p-10 md:p-14 rounded-3xl border border-purple-400/20 shadow-[0_0_40px_rgba(168,85,247,0.3)]" data-aos="fade-up">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-purple-400 drop-purple mb-4">About Me</h2>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto">Creative developer passionate about building fast, modern web apps with beautiful user experiences.</p>
+    </div>
+
+    <div class="md:flex md:items-center md:gap-10">
+      <div class="tilt-3d mb-10 md:mb-0 mx-auto md:mx-0" data-aos="zoom-in">
+        <img src="img/developer-logo-512.jpg" alt="Developer" class="w-48 h-48 rounded-full object-cover border-4 border-purple-400 shadow-xl" />
+      </div>
+      <div>
+        <h3 class="text-2xl font-semibold mb-3">Full-Stack Web Developer</h3>
+        <p class="text-gray-400 mb-4">I build high-performance, responsive web apps using <span class="text-purple-400 font-semibold">React</span>, <span class="text-purple-400 font-semibold">Next.js</span>, and backend tools like <span class="text-purple-400 font-semibold">Node.js</span> and <span class="text-purple-400 font-semibold">MongoDB</span>.</p>
+        <a href="#" class="inline-block mt-4 px-6 py-2 bg-purple-400 text-black font-semibold rounded-full shadow-md hover:bg-purple-300 transition duration-300">📄 Download Resume</a>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="mt-16">
+      <h3 class="text-2xl font-bold mb-6 text-purple-400">Skills</h3>
+      <div class="space-y-5">
+        <div><p class="text-sm mb-1">HTML / CSS / Tailwind</p><div class="w-full h-3 bg-gray-800 rounded-full"><div class="bg-purple-400 h-full w-[95%] rounded-full"></div></div></div>
+        <div><p class="text-sm mb-1">JavaScript / React.js</p><div class="w-full h-3 bg-gray-800 rounded-full"><div class="bg-purple-400 h-full w-[90%] rounded-full"></div></div></div>
+        <div><p class="text-sm mb-1">Node.js / Express</p><div class="w-full h-3 bg-gray-800 rounded-full"><div class="bg-purple-400 h-full w-[85%] rounded-full"></div></div></div>
+        <div><p class="text-sm mb-1">MongoDB / MySQL</p><div class="w-full h-3 bg-gray-800 rounded-full"><div class="bg-purple-400 h-full w-[75%] rounded-full"></div></div></div>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="mt-20">
+      <h3 class="text-2xl font-bold mb-6 text-purple-400">Experience</h3>
+      <div class="space-y-6 border-l-2 border-purple-400 pl-6">
+        <div><h4 class="text-lg font-semibold text-white">Frontend Developer @ SoftTech</h4><p class="text-gray-400 text-sm">2022 - Present</p><p class="text-gray-300 mt-1">Built responsive UIs with React, optimized SEO and performance.</p></div>
+        <div><h4 class="text-lg font-semibold text-white">Intern @ CodeBase</h4><p class="text-gray-400 text-sm">2021 - 2022</p><p class="text-gray-300 mt-1">Contributed to open-source projects and learned backend fundamentals.</p></div>
+      </div>
+    </div>
+
+    <!-- Hobbies -->
+    <div class="mt-16">
+      <h3 class="text-2xl font-bold mb-6 text-purple-400">Hobbies & Interests</h3>
+      <ul class="flex flex-wrap gap-4 text-gray-300">
+        <li class="px-4 py-2 bg-white/10 rounded-xl">UI Design</li>
+        <li class="px-4 py-2 bg-white/10 rounded-xl">Gaming</li>
+        <li class="px-4 py-2 bg-white/10 rounded-xl">Reading Tech Blogs</li>
+        <li class="px-4 py-2 bg-white/10 rounded-xl">Photography</li>
+        <li class="px-4 py-2 bg-white/10 rounded-xl">Problem Solving</li>
+      </ul>
+    </div>
+
+    <!-- Tech Stack Icons -->
+    <div class="mt-16">
+      <h3 class="text-2xl font-bold mb-6 text-purple-400">Tech Stack</h3>
+      <div class="flex flex-wrap items-center gap-6">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-10 h-10" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-10 h-10" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-10 h-10" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-10 h-10" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-10 h-10" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="w-10 h-10" />
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="mt-16">
+      <h3 class="text-2xl font-bold mb-6 text-purple-400">Certifications</h3>
+      <ul class="space-y-4 text-gray-300">
+        <li>✅ JavaScript Mastery – freeCodeCamp</li>
+        <li>✅ Full-Stack Developer Bootcamp – Udemy</li>
+        <li>✅ Responsive Web Design – freeCodeCamp</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+<script>
+  AOS.init();
+  VanillaTilt.init(document.querySelectorAll(".tilt-3d"), {
+    max: 15,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.3
+  });
+  document.getElementById("navToggle").addEventListener("click", function () {
+    document.getElementById("mobileNav").classList.toggle("hidden");
+  });
+</script>
+
+</body>
+</html>
